@@ -1,7 +1,0 @@
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\bin\Debug\ScientificCalcu.exe.config
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\bin\Debug\ScientificCalcu.exe
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\bin\Debug\ScientificCalcu.pdb
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\obj\Debug\ScientificCalcu.csproj.AssemblyReference.cache
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\obj\Debug\ScientificCalcu.csproj.CoreCompileInputs.cache
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\obj\Debug\ScientificCalcu.exe
-C:\Users\SAMSUNG\source\repos\ScientificCalcu\ScientificCalcu\obj\Debug\ScientificCalcu.pdb
