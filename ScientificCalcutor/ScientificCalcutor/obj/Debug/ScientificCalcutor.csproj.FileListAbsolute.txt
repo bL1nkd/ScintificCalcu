@@ -1,0 +1,7 @@
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\bin\Debug\ScientificCalcutor.exe.config
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\bin\Debug\ScientificCalcutor.exe
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\bin\Debug\ScientificCalcutor.pdb
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\obj\Debug\ScientificCalcutor.csproj.AssemblyReference.cache
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\obj\Debug\ScientificCalcutor.csproj.CoreCompileInputs.cache
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\obj\Debug\ScientificCalcutor.exe
+C:\Users\SAMSUNG\source\repos\ScientificCalcutor\ScientificCalcutor\obj\Debug\ScientificCalcutor.pdb
