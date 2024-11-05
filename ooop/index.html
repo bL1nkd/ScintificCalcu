@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ros Portfolio</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap for layout and responsive design -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+
+        /* Top Navigation Container */
+        .top-nav {
+            width: 100%;
+            background-color: #000; 
+            height: 60px; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px; 
+        }
+
+        /* Navigation Title */
+        .nav-title {
+            color: #fff;
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* Nav Pills Style */
+        .nav-pills {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+        }
+
+        .nav-pills li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Links Style */
+        .nav-pills li a {
+            color: #fff; 
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .nav-pills li a:hover {
+            background-color: #fafafa; 
+            color: #000;
+        }
+
+        .nav-pills li:first-child a:hover {
+            background-color: #f0edf5; 
+            color: #000;
+        }
+
+        /* Active Menu Item */
+        .nav-pills li.active a {
+            background-color: #201f20; 
+            font-weight: bold; 
+        }
+
+        /* Content Spacing for Fixed Nav */
+        .content {
+            padding-top: 80px; 
+        }
+
+        /* Home Section */
+        #home {
+            text-align: center;
+            padding: 120px 0;
+            background-color: #000000; 
+            color: white;
+        }
+
+        #home  img {
+            border-radius: 50%;
+            width: 350px;
+            height: 350px;
+        }
+
+        #home h1 {
+            font-size: 60px; 
+            margin: 20px 0;
+        }
+
+        #home p {
+            font-size: 22px; 
+            margin-bottom: 30px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 50px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            max-width: 3000px; 
+        }
+
+        .project-box {
+            background-color: #fff; 
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px; 
+            margin: 10px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+       
+
+        /* Skills Section */
+        #skills {
+            padding: 50px;
+            background-color: #ffffff;
+            color: #0f0f0f;
+            text-align: center;
+        }
+
+        .skills-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skills-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-container li {
+            font-size: 18px; 
+            margin: 10px 0; 
+        }
+
+        /* Experience Section */
+        #experience {
+            padding: 50px;
+            background-color: #f9f9f9;
+            color: #0f0f0f;
+            text-align: center;
+        }
+
+        .experience-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .experience-container ul {
+            list-style-type: none; 
+            padding: 0;
+        }
+
+        .experience-container li {
+            font-size: 18px; 
+            margin: 10px 0; 
+        }
+
+        /* Call to Action */
+        .call-to-action .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #0f0e0e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .call-to-action .btn:hover {
+            background-color: #6464646b;
+            color: #fffdfd;
+        }
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #f3f3f3;
+    color: #0f0f0f;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: left; 
+}
+
+.form-group {
+    margin-bottom: 20px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+button {
+    background-color: #424242; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cccccc;
+    color: #ffffff; 
+}
+
+
+        /* Footer */
+        footer {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: right;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="top-nav" id="top-nav">
+        <div class="nav-title">CodingRos</div>
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
+            <li><a href="#about"><i class="fa fa-user fa-fw"></i> About Me</a></li>
+            <li><a href="#projects"><i class="fa fa-briefcase fa-fw"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fa fa-signal fa-fw"></i> Skills</a></li>
+            <li><a href="#experience"><i class="fa fa-trophy fa-fw"></i> Experience</a></li>
+            <li><a href="#contact"><i class="fa fa-envelope-o fa-fw"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="content">
+            <img src="dabi.jpg" alt="Maritoni Ros" >
+            <h1>Hi, I'm Maritoni P. Ros</h1>
+            <p>3rd Year IT Student</p>
+            <div class="call-to-action">
+                <a href="#projects" class="btn">Check out my work</a>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <h1>About Me</h1>
+            <p>Hello! I'm <strong>Maritoni Ros</strong>, a student passionate about becoming a <strong>Full Stack Developer</strong>. I'm currently learning various technologies and frameworks that will help me create solutions that not only solve problems but also enhance user experiences.</p>
+            <p>As I continue my education, I am eager to work on projects that challenge me and allow me to apply what I've learned. My goal is to develop my skills and knowledge in the field of web development.</p>
+        </div>
+    </section>
+    
+<!-- Projects Section -->
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="projects-container">
+        <div class="project-box">
+            <h2>Scientific Calculator Project</h2>
+            <p>I am developing a scientific calculator as a console application using C#. This project is designed to support:</p>
+            <ul>
+                <li>Basic arithmetic operations: addition, subtraction, multiplication, and division</li>
+                <li>Scientific operations: square root, power, and trigonometric functions</li>
+                <li>A clean coding architecture that enhances readability and maintainability</li>
+            </ul>
+        </div>
+
+     
+        
+        <!-- Add more projects -->
+    </div>
+    <p>To view more projects, visit my <a href="https://github.com/bL1nkd" target="_blank">GitHub Profile</a>.</p>
+</section>
+
+        
+        <!-- Add more projects  -->
+    </div>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <ul>
+                <li>HTML, C#</li>
+                <li>Database Management (MySQL, MongoDB)</li>
+                <li> Web Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+<!-- Experience Section -->
+<section id="experience">
+    <h1>Experience</h1>
+    <div class="experience-container">
+        <p>I am currently a student pursuing my education in Full Stack Development. While I do not have formal work experience yet, I am actively learning and applying various technologies through my coursework and personal projects.</p>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+            
+            <!-- GitHub and Email -->
+            <p><strong>GitHub:</strong> <a href="https://github.com/bL1nkd" target="_blank">Blink</a></p>
+            <p><strong>Email:</strong> <a href="mailto:toniiros2@gmail.com">toniiros@gmail.com</a></p>
+    
+            <!-- Contact Form -->
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+<!-- Footer -->
+<footer style="text-align: center;">
+    &copy; 2024 Maritoni Ros Portfolio
+</footer>
+
+
+</body>
+</html>
